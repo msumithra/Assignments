@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .one{
+            grid-area: a;
+        }
+        .two{
+            grid-area: b;
+        }
+        .three{
+            grid-area: c;
+        }
+        .four{
+            grid-area: d;
+        }
+        .five{
+            grid-area: e;
+        }
+        .six{
+            grid-area: f;
+        }
+        .seven{
+            grid-area: g;
+        }
+        .eig{
+            grid-area: h;
+        }
+        .nine{
+            grid-area: i;
+        }
+        .ten{
+            grid-area: j;
+        }
+        .main{
+            
+            height: 300px;
+            width: 30%;
+            text-align: center;
+            display: grid;
+            text-decoration: solid;
+            font-size: 23px;
+            grid-template-columns: repeat(5,1fr);
+            grid-template-areas: 'a a a a a' 
+                                  'b b c c e'
+                                  'b b c c f'
+                                  'b b c c g'
+                                  'b b d d h'
+                                  'b b d d i'
+                                  'j j j j j';
+                                  
+            
+        }
+        .main>div:nth-child(1){
+            background-color: #f9cb9c;
+            border: 1px solid rgb(136, 135, 135);
+            text-align: center;
+        }
+        .main>div:nth-child(2){
+            background-color:#a2c4c9;
+            border: 1px solid rgb(136, 135, 135);
+        }
+        .main>div:nth-child(3){
+            background-color: #b4a7d5;
+            border: 1px solid rgb(136, 135, 135);
+        }
+        .main>div:nth-child(4){
+            background-color: #d5a6bd;
+            border: 1px solid rgb(136, 135, 135);
+        }
+        .main>div:nth-child(5){
+            background-color: #a3c2f4;
+            border: 1px solid rgb(136, 135, 135);
+        }
+        .main>div:nth-child(6){
+            background-color: #9ec5e8;
+            border: 1px solid rgb(136, 135, 135);
+        }
+        .main>div:nth-child(7){
+            background-color: #ffe598;
+            border: 1px solid rgb(136, 135, 135);
+        }
+        .main>div:nth-child(8){
+            background-color: #6d9eeb;
+            border: 1px solid rgb(136, 135, 135);
+        }
+        .main>div:nth-child(9){
+            background-color: #d8d2e9;
+            border: 1px solid rgb(136, 135, 135);
+        }
+        .main>div:nth-child(10){
+            background-color: #b7d7a8;
+            border: 1px solid rgb(136, 135, 135);
+        }
+        
+        
+        
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="one">1</div>
+        <div class="two">2</div>
+        <div class="three">3</div>
+        <div class="four">4</div>
+        <div class="five">5</div>
+        <div class="six">6</div>
+        <div class="seven">7</div>
+        <div class="eig">8</div>
+        <div class="nine">9</div>
+        <div class="ten">10</div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .one{
+            grid-area: a;
+        }
+        .two{
+            grid-area: b;
+        }
+        .three{
+            grid-area: c;
+        }
+        .four{
+            grid-area: d;
+        }
+        .five{
+            grid-area: e;
+        }
+        .six{
+            grid-area: f;
+        }
+        .seven{
+            grid-area: g;
+        }
+        .eig{
+            grid-area: h;
+        }
+        .main{
+            
+            height: 300px;
+            width: 30%;
+            text-align: center;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-areas: 'a a a' 
+                                  'b c d'
+                                  'b e e'
+                                  'f f g'
+                                  'h h h';
+                                  gap: 10px;
+                                  font-size: 40px;
+                                  color: white;
+            
+        }
+        .main>div:nth-child(1){
+            background-color: #b8336a;
+        }
+        .main>div:nth-child(2){
+            background-color:#726da8;
+        }
+        .main>div:nth-child(3){
+            background-color: #7c8cc4;
+        }
+        .main>div:nth-child(4){
+            background-color: #9fd2db;
+        }
+        .main>div:nth-child(5){
+            background-color: #c490d2;
+        }
+        .main>div:nth-child(6){
+            background-color: #b8336a;
+        }
+        .main>div:nth-child(7){
+            background-color:#726da8;
+        }
+        .main>div:nth-child(8){
+            background-color:#7c8cc4;
+        }
+        
+        
+        
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="one">1</div>
+        <div class="two">2</div>
+        <div class="three">3</div>
+        <div class="four">4</div>
+        <div class="five">5</div>
+        <div class="six">6</div>
+        <div class="seven">7</div>
+        <div class="eig">8</div>
+
+    </div>
+</body>
+</html>
