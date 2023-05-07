@@ -1,0 +1,130 @@
+.flex{
+				display:flex;
+			}
+			.firstBox{
+				width:1020px;
+				height:390px;
+				margin-right:300px;
+			}
+			.whitish{
+				background-color:rgb(244,239,239);
+				border:1px solid black;
+				margin:7px;
+				
+			}
+			.seconBox{
+				width:270px;
+				height:390px;
+	
+			}
+			.firstRow{
+				display:flex;
+				margin:7px;
+				text-align:center;
+			}
+			.smallBox{
+				border:1px solid black;
+				padding:10px 21px 13px 21px;
+				margin:7px;
+				border-radius:10%;
+				
+			}
+			.secondRow{
+				margin:7px;
+				width:900px;
+			}
+			.middleBox1{
+				border:1px solid black;
+				padding:14px 51px 14px 43px;
+				margin:7px;
+				border-radius:10%;
+				
+			}
+			.middleBox2{
+				border:1px solid black;
+				padding:14px 43px 14px 52px;
+				margin:7px;
+				border-radius:10%;
+			}
+			.back{
+				border:1px solid black;
+				margin:7px;
+				border-radius:4%;
+				padding:16px 49px 14px 60px;
+			}
+			.thirdRow{
+				margin:7px;
+				width:900px;
+			}
+			.back2{
+				border:1px solid black;
+				margin:7px;
+				border-radius:4%;
+				padding:14px 65px 14px 63px;
+			}
+			.enter{
+				border:1px solid black;
+				margin:7px;
+				border-radius:4%;
+				padding:14px 45px 14px 45px;
+			}
+			.fourthRow{
+				margin:7px;
+				width:900px;
+			}
+			.back3{
+				border:1px solid black;
+				margin:7px;
+				border-radius:4%;
+				padding:14px 61px 14px 61px;
+			}
+			.fifthRow{
+				margin:7px;
+				width:900px;
+			}
+			.space{
+				border:1px solid black;
+				margin:7px;
+				border-radius:4%;
+				padding:23px 358px 23px 0px;
+				
+			}
+			.smallBoxs{
+				border:1px solid black;
+				padding:23px 22px 15px 20px;
+				margin:7px;
+				border-radius:10%;
+			}
+			.smallBoxs2{
+				border:1px solid black;
+				padding:27px 25px 27px 25px;
+				margin:7px;
+				border-radius:10%;
+			}
+			
+			.bigbox{
+				border:1px solid black;
+				padding:58px 20px 58px 20px;
+				margin:7px;
+				border-radius:10%;
+			}
+			.smallBoxed{
+				border:1px solid black;
+				padding:19px 54px 19px 55px;
+				margin:7px;
+				border-radius:10%;
+			}
+			.b{
+				margin-bottom:15px;
+			}
+			.m{
+				margin-left:1px;
+			}
+			.smallBox5{
+				border:1px solid black;
+				padding:23px 25px 15px 20px;
+				margin:7px;
+				border-radius:10%;
+			}
+			
+			

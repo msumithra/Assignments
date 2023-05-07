@@ -1,0 +1,115 @@
+<html>
+	<head>
+		<title>Emplyoyee details</title>
+		<style>
+			input{
+				margin:auto;
+				padding:5px 94px 5px 0px;
+				margin-top:10px;
+				text-align:left;
+				font-size:24px;
+			}
+			.button{
+				
+				padding:8px 170px;
+				margin-top:10px;
+				background:linear-gradient(45deg, skyblue,pink,purple,tomato);
+				color:white;
+				border:1px solid rgb(169,48,50);
+				font-size:22px;
+			}
+			.mainDiv{
+				margin:33%;
+				margin-top:3%;
+
+			}
+			th{
+				padding:20px;
+				font-size:21px;	
+			}
+			td{
+				padding:20px;
+				font-size:17px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="mainDiv">
+			<input class="name" type="text" placeholder="Employee name"/><br>
+			<input class="depart" type="text" placeholder="Department"/><br>
+			<input class="sale1" type="number" placeholder="Sales1"/><br>
+			<input class="sale2" type="number" placeholder="Sales2"/><br>
+			<button class="button">Submit</button>
+			<div class="divData">
+			
+			</div>
+		
+		</div>
+		
+		<script type="text/javascript">
+			let table = document.createElement("table");
+			table.setAttribute("border", 1)
+			table.style.borderCollapse = "collapse";
+			table.style.marginTop="20px";
+			
+			
+			let tableRow = document.createElement("tr");
+			
+			let tabHead1 = document.createElement("th");
+			tabHead1.textContent = "Employee name";
+			
+			let tabHead2 = document.createElement("th");
+			tabHead2.textContent = "Department";
+			
+			let tabHead3 = document.createElement("th");
+			tabHead3.textContent = "Sales2";
+			
+			let tabHead4 = document.createElement("th");
+			tabHead4.textContent = "Sales1";
+			
+			let tabHead5 = document.createElement("th");
+			tabHead5.textContent = "Average";
+			
+			tableRow.append(tabHead1,tabHead2,tabHead3,tabHead4,tabHead5);
+			table.append(tableRow);
+			
+			let divData =document.querySelector(".divData");
+			divData.append(table);
+			
+			let button = document.querySelector(".button");
+			
+			button.onclick=function()
+			{
+				let tableRow1 = document.createElement("tr");
+			
+				let name = document.querySelector(".name").value;
+				let tabData1 = document.createElement("td");
+				tabData1.textContent=name;
+				
+				let depart = document.querySelector(".depart").value;
+				let tabData2 = document.createElement("td");
+				tabData2.textContent=depart;
+				
+				let sale1 = document.querySelector(".sale1").value;
+				let tabData3 = document.createElement("td");
+				tabData3.textContent=sale1;
+				
+				let sale2 = document.querySelector(".sale2").value;
+				let tabData4 = document.createElement("td");
+				tabData4.textContent=sale2;
+				
+				let average = (Number(sale1) +Number(sale2))/2;
+				let tabData5 = document.createElement("td");
+				tabData5.textContent= average;
+				
+				tableRow1.append(tabData1,tabData2,tabData3,tabData4,tabData5);
+				
+				table.append(tableRow1);
+			
+			
+			}
+			
+		
+		</script>
+	</body>
+</html>

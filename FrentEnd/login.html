@@ -1,0 +1,83 @@
+<html>
+	<head>
+		<title>Login page</title>
+		<style>
+		input{
+			color:aqua;
+			font-size:20px;
+			padding:10px 20px 20px 10px;
+			margin-top:20px;
+		}
+		div{
+			text-align:center;
+			margin:20%;
+			margin-top:10%;
+		}
+		body{
+			background:linear-gradient(45deg,rgb(154,93,247),rgb(247,76,160),maroon,rgb(22,221,242),rgb(93,132,232),maroon);
+		}
+		button{
+			background:none;
+			padding:10px 25px 10px 25px;
+			margin-top:20px;
+			color:white;
+			font-size:25px;
+			border:1px solid white;
+		}
+		p{
+			margin-left:60px;
+			color:white;
+			font-size:18px;
+		}
+		.a{
+			color:white;
+		}
+		a{
+			color:white;
+			}
+		#forgetP{
+			display:flex;
+		}
+		
+		</style>
+	</head>
+	<body>
+		<div>
+			<h1 class="a">Login</h1>
+			<h4 class="a">welcome to login page</h4>
+			<input class="txt" type="text" placeholder="Username"/><br>
+			<input class="password" type="password" placeholder="password"/><br>
+			<button class="button">Login</button><br>
+			<div id="forgetP">
+			<p><a href="fogetPassword.html">Forgot Password</a></p>
+			<p>Not a member? <a href="signin.html">sign up</a></p></div>
+		</div>
+		
+		<script>
+			let result = JSON.parse(localStorage.getItem("data"))||[];
+			
+			let button = document.querySelector(".button");
+			button.onclick = function(){
+				let name = document.querySelector(".txt").value;
+				let pass = document.querySelector(".password").value;
+				
+				if(name=="" || pass==""){
+					alert("Please fill all the details");
+				}
+				for(let i=0 ;i<result.length; i++)
+				{
+					if(result[i].username === name && result[i].password === pass ){
+						alert("login Successful");
+					localStorage.setItem("Newdata",JSON.stringify(result[i]));
+					window.location.href="dashboard.html";
+					return;
+					}
+				}
+				alert("login failed");
+			}
+			
+			
+		</script>
+	
+	</body>
+</html>

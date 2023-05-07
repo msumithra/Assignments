@@ -1,0 +1,62 @@
+<html>
+	<head>
+		<title>DashBoard page</title>
+		<style>
+		h1{
+			text-align:center;
+		}
+		.button{
+			padding:20px;
+			margin-left:45%;
+			margin-top:2%;
+		}
+		</style>
+	</head>
+	<body>
+		<h1>Dashboard page</h1>
+		<div class="display"></div>
+		<button class="button">LogOut</button>
+		
+		
+	</body>
+	<script type="text/javascript">
+		let display = document.querySelector(".display");
+		
+		let logoutBtn = document.querySelector(".button");
+	
+		let result = JSON.parse(localStorage.getItem("Newdata"));
+		
+		if(result){
+		
+			let insideDiv = document.createElement("div");
+			
+			let name = document.createElement("div");
+			name.innerText = "Name : "+result.name;
+				
+			let username = document.createElement("div");
+			username.innerText = "Username : "+ result.username;
+				
+			let email =document.createElement("div");
+			email.innerText = "Email Address : "+ result.email;
+				
+			let mobileNum = document.createElement("div");
+			mobileNum.innerText = "Mobile Number : " + result.mobNum;
+
+			insideDiv.append(name,username,email,mobileNum);
+			
+			display.append(insideDiv);
+		}
+		else{
+			window.location.href="login.html";
+		}
+	
+	
+		logoutBtn.onclick = function(){
+			localStorage.removeItem("Newdata");
+			alert("The item is removed from local storage");
+			window.location.href="login.html";
+		}
+			
+		
+		</script>
+</html>

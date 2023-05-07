@@ -1,0 +1,52 @@
+<html>
+	<head>
+		<title>Switch on the bulb</title>
+	</head>
+	<body>
+		<div id="bulb"></div>
+			<button class="button"></button>
+		
+		
+		
+		
+	<script type="text/javascript">
+		let bulbClass = document.querySelector("#bulb");
+		bulbClass.style.border = "1px solid black";
+		bulbClass.style.borderRadius =" 50%";
+		bulbClass.style.width= "200px";
+		bulbClass.style.height = "200px";
+		bulbClass.style.marginLeft = "650px";
+		
+		
+		
+		
+		let Button = document.querySelector('.button');
+		Button.style.marginTop = "50px";
+		Button.style.marginLeft = "690px";
+		Button.style.width= "120px";
+		Button.style.height = "40px";
+		Button.style.align = "center";
+		Button.textContent = "On";
+		
+		//bulb is on or off condition and to check the backgroundcolor;
+		
+		let flag=false;
+		Button.onclick = function(){
+			flag=!flag
+			if(flag)
+			{
+				bulbClass.style.backgroundColor="green";
+				Button.textContent = "off";
+			}
+			else{
+				bulbClass.style.backgroundColor="white";
+				Button.textContent = "On";
+			}
+			}
+		
+		
+		
+	</script>
+	</body>
+	
+</html>

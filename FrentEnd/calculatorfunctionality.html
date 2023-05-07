@@ -1,0 +1,132 @@
+<html>
+	<head>
+		<title></title>
+		<style>
+			body{
+				background-color:rgb(168,191,126);
+	
+			}
+			.skyblue{
+				background-color:skyblue;
+			}
+			.orange{
+				background-color:orange;
+			}
+			.silver{
+				background-color:silver;
+			}
+			.yellow{
+				background-color:yellow;
+			}
+			.container{
+				width:370px;
+				padding:3px;
+				margin:auto;
+				margin-top:100px;
+				
+			}
+			.white{
+				background-color:white;
+			}
+			.display{
+				padding:30px;
+				margin:2%;
+			}
+			.box{
+				display:flex;
+			}
+			.number{
+				padding:32px;
+				margin-left:9px;
+				margin-right:10px;
+				font-size:20px;
+				margin-bottom:15px;
+			}
+			.morespace{
+				padding:34px;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="container skyblue">
+			
+			<div class="display white" id="value"></div>
+			<div class="box">
+				<div class="number silver"  onClick="clickNumber(1)">1</div>
+				<div class="number silver" onClick="clickNumber('2')">2</div>
+				<div class="number silver" onClick="clickNumber(3)">3</div>
+				<div class="number yellow" onClick="clickNumber(`+`)">+</div>
+				
+			</div>
+			<div class="box">
+			 	<div class="number silver" onClick="clickNumber(4)">4</div>
+				<div class="number silver" onClick="clickNumber(5)">5</div>
+				<div class="number silver" onClick="clickNumber(6)">6</div>
+				<div class="number yellow morespace" onClick="clickNumber(`-`)">-</div>
+			 </div>
+			<div class="box">
+				<div class="number silver" onClick="clickNumber(7)">7</div>
+				<div class="number silver" onClick="clickNumber(8)">8</div>
+				<div class="number silver" onClick="clickNumber(9)">9</div>
+				<div class="number yellow" onClick="clickNumber(`*`)">*</div>
+			</div>
+			<div class="box">
+				<div class="number orange " id="clear" onClick="clickNumber(`c`)">c</div>
+				<div class="number silver" onClick="clickNumber(0)">0</div>
+				<div class="number silver" onClick="clickNumber(`=`)">=</div>
+				<div class="number yellow morespace" onClick="clickNumber(`/`)">/</div>
+			</div>
+		</div>
+		<script>
+			
+			var string = "";
+			var value = document.getElementById("value");
+			var numArray =[];
+			var operatorsArr=[];
+			var clear=document.getElementById("clear");
+			function clickNumber(i){
+			if(i==='c'){
+				string = "";
+				value.innerText = string;
+			}
+			if(i==='+' || i==='-'||i==='*'||i==='/'){
+				numArray.push(string);
+				operatorsArr.push(i);
+				console.log(numArray);
+				console.log(operatorsArr);
+				string="";
+			}
+			/*else if(i==='-'){
+				numArray.push(string);
+				operatorsArr.push('-');
+				console.log(numArray);
+				console.log(operatorsArr);
+				string="";
+			}
+			else if(i==='*'){
+				numArray.push(string);
+				operatorsArr.push('*');
+				console.log(numArray);
+				console.log(operatorsArr);
+				string="";
+			}
+			else if(i==='/'){
+				numArray.push(string);
+				operatorsArr.push('/');
+				console.log(numArray);
+				console.log(operatorsArr);
+				string="";
+			}*/
+			else{
+				string += i	
+				console.log(string)
+				}
+				value.innerHTML = string;
+    			}
+    			
+    			
+    			
+		</script>
+	</body>
+</html>

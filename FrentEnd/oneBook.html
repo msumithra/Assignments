@@ -1,0 +1,109 @@
+<html>
+	<head>
+		<title>One book</title>
+		<style>
+			.navImg{
+				border-radius:50%;
+				width:60px;
+				height:60px;
+
+			}
+			.nav{
+				background-color:Crimson;
+				display:flex;
+				position:fixed;
+				width:100%;
+				left:0px;
+				top:0px;
+			}
+			.aTags{
+				margin-left:900px;
+				display:flex;
+				
+			}
+			a{
+				text-decoration:none;
+				font-size:20px;
+				margin-top:8px;
+				color:white;
+				margin-right:20px;
+			}
+			.cards{
+				margin-top:5%;
+				margin-left:40%;
+				border:1px solid black;
+			}
+			.name{
+				
+			}
+		</style>
+	</head>
+	<body>
+		<nav class="nav">
+			<div>
+				<a href="homepage.html"><img class="navImg" src="https://i.pinimg.com/originals/ef/57/fc/ef57fca857b89de33b81e9f552c93db7.png" alt=""/></a>
+			</div>
+			<div class="aTags">
+				<a href="addBook.html"><b>Add book</b></a>
+				<a href="veiwPage.html"><b>Veiw All Books</b></a>
+				
+			</div>
+		</nav>
+		<div class="display">
+		
+		</div>
+	</body>
+	<script>
+		let allBookDetails = JSON.parse(localStorage.getItem("OneBookData"));
+		
+		console.log(allBookDetails);
+		
+		let display = document.querySelector(".display");
+		
+		let cards = document.createElement("div");
+		
+		let name = document.createElement("div");
+		name.innerText = allBookDetails.name;
+		
+		let avatar = document.createElement("img");
+		avatar.setAttribute("src", allBookDetails.avatar);
+		
+		let author = document.createElement("div");
+		author.innerText = allBookDetails.author;
+		
+		let publisher = document.createElement("div");
+		publisher.innerText = allBookDetails.publisher;
+		
+		let price = document.createElement("div");
+		price.innerText = allBookDetails.price;
+		
+		let type =document.createElement("div");
+		type.innerText = allBookDetails.type;
+		
+		let rate = document.createElement("div");
+		rate.innerText = allBookDetails.rate;
+		
+		let serial_number = document.createElement("div");
+		serial_number.innerText = allBookDetails.serial_number;
+		
+		let year = document.createElement("div");
+		year.innerText = allBookDetails.year;
+	
+		
+		console.log(name,avatar,author,publisher,price,type,rate,serial_number,year);
+		cards.append(name,avatar,author,publisher,price,type,rate,serial_number,year);
+		cards.setAttribute("class","cards");
+		name.setAttribute("class","name");
+		author.setAttribute("class","authorname");
+		publisher.setAttribute("class","publisher");
+		price.setAttribute("class","price");
+		type.setAttribute("class","type");
+		rate.setAttribute("class","rate");
+		serial_number.setAttribute("class","serial_number");
+		year.setAttribute("class","year");
+		
+		
+		display.append(cards);
+		
+	</script>
+</html>

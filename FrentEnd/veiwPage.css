@@ -1,0 +1,66 @@
+
+			.navImg{
+				border-radius:50%;
+				width:60px;
+				height:60px;
+
+			}
+			.nav{
+				background-color:Crimson;
+				display:flex;
+				position:fixed;
+				top:0;
+				left:0;
+				width:100%;
+			}
+			.aTags{
+				margin-left:900px;
+				display:flex;
+				
+			}
+			a{
+				text-decoration:none;
+				font-size:20px;
+				margin-top:8px;
+				color:white;
+				margin-right:20px;
+			}
+		.bigDiv{
+			display:flex;
+			flex-wrap:wrap;
+			text-align:center;
+			color:white;
+		}
+		
+		.smallDiv{
+			border:1px solid black;
+			width:280px;
+			height:258px;
+			margin:2.5%;
+			background-color:#008080;	
+		}
+		.smallDiv:hover{
+			background-color:#2F4F4F;
+			box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+		}
+		
+		.authorname{
+			padding:0px 0px 0px 98px;
+			font-size:19px;
+			margin:8px;
+		}
+		.image{
+			width:38%;
+		}
+		.name{
+			text-align:center;
+			font-size:24px;
+			margin:15px;
+		}
+		.publisher{
+			text-align:right;
+		}
+		h1{
+			color:Crimson;
+		}
+		

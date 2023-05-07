@@ -1,0 +1,68 @@
+<html>
+	<head>
+		<title>View Page</title>
+	</head>
+	<style>
+	
+	</style>
+	
+	<body>
+		<h1 align="center">Veiw page</h1>
+		<div class="displayBooks"></diV>
+		<button class="button">Veiw all books</button>
+	</body>
+	<script>
+		let displayBooks = document.querySelector(".displayBooks");
+		let button = document.querySelector(".button");
+		
+		let libraryBookDetails = JSON.parse(localStorage.getItem("bookDetails"))||[];
+			let bigDiv = document.createElement("div");
+			
+			
+			for(let i = 0 ; i<libraryBookDetails.length;i++)
+			{
+				let smallDiv = document.createElement("div");
+				
+				let authorname = document.createElement("div");
+				authorname.innerText ="-" + libraryBookDetails[i].author;
+				authorname.style.textAlign="right";
+				authorname.style.fontSize="18px";
+				authorname.style.margin="8px";
+				
+				let image = document.createElement("img");
+				image.setAttribute("src",libraryBookDetails[i].avatar);
+				image.style.width="38%";
+				//image.style.marginLeft="50%";
+				
+			
+				
+				let name = document.createElement("div");
+				name.innerText =libraryBookDetails[i].name;
+				name.style.textAlign="center";
+				name.style.fontSize="24px";
+				name.style.margin="15px";
+				
+				let publisher =document.createElement("small");
+				publisher.innerText = "(" + libraryBookDetails[i].publisher +")";
+				publisher.style.textAlign="right";
+				
+				
+				smallDiv.append(name,image,authorname,publisher);
+				smallDiv.style.border="1px solid black";
+				smallDiv.style.width="280px";
+				smallDiv.style.height="258px";
+				smallDiv.style.margin="2.5%";
+				smallDiv.style.backgroundColor="#008080";
+				
+				
+				bigDiv.append(smallDiv);
+				bigDiv.style.border="1px solid black";
+				bigDiv.style.display="flex";
+				bigDiv.style.flexWrap="wrap";
+				bigDiv.style.textAlign="center";
+				bigDiv.style.color="white";
+			}	
+			
+		displayBooks.append(bigDiv);
+	</script>
+</html>

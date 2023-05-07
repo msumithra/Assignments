@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	 <head>
+	    	<title>Calculator</title>
+	 </head>
+	 <body>
+	   	<input type="number" id="number1">
+	    	<input type="number" id="number2">
+	    
+		    <button id="add" onClick="A()">Add</button>
+		    <button id="substract"onClick="S()">Substract</button>
+		    <button id="multiply" onclick="M()">Multiply</button>
+		    <button id="devide"onClick="D()">Devide</button>
+  </body>
+  <script>
+    
+
+    function A(){
+    let numa = document.querySelector("#number1").value;
+    let numb = document.querySelector("#number2").value;
+    console.log(numa,numb);
+    let sum = (Number(numa))+(Number(numb));
+    alert(sum);
+}
+function S(){
+    let numa = document.querySelector("#number1").value;
+    let numb = document.querySelector("#number2").value;
+    let sub = (Number(numa))-(Number(numb));
+    alert(sub);
+}
+function M(){
+    let numa = document.querySelector("#number1").value;
+    let numb = document.querySelector("#number2").value;
+    let sum = (Number(numa))*(Number(numb));
+    alert(sum);
+}
+function D(){
+    let numa = document.querySelector("#number1").value;
+    let numb = document.querySelector("#number2").value;
+    let sum = (Number(numa))/(Number(numb));
+    alert(sum);
+}
+  </script>
+</html>

@@ -1,0 +1,126 @@
+<html>
+	<head>
+		<title>AddBook</title>
+	</head>
+	<style>
+		input{
+			padding:12px 38px 12px 38px;
+			font-size:15px;
+			margin-top:-2%;
+			margin-left:5%;
+			
+		}
+		h1{
+			font-size:18px;
+			margin-left:5%;
+		
+		}
+		.divT{
+			margin-left:7%;
+			width:26%;
+			background-image:url(https://tse3.mm.bing.net/th?id=OIP.QStcBUzZGA2dGHB55t3A7QHaEo&pid=Api&P=0);
+			background-repeat:no-repeat;
+			background-attachment:fixed;
+			background-size:cover;
+			
+		}
+		.button{
+			padding:15px 40px 15px 40px;
+			font-size:19px;
+			margin-top:2%;
+			border:1px solid Crimson;
+			background-color:Crimson;
+			margin:5%;
+			color:white;
+			margin-left:25%;
+		}
+		body{
+			background-image:url(https://scholarlykitchen.sspnet.org/wp-content/uploads/2018/07/iStock-506432952.jpg);
+			background-repeat:no-repeat;
+			background-attachment:fixed;
+			background-size:cover;
+		}
+		.navImg{
+				border-radius:50%;
+				width:60px;
+				height:60px;
+
+			}
+			.nav{
+				background-color:Crimson;
+				display:flex;
+				position:fixed;
+				top:0;
+				left:0;
+				width:100%;
+			}
+			.aTags{
+				margin-left:900px;
+				display:flex;
+				
+			}
+			a{
+				text-decoration:none;
+				font-size:20px;
+				margin-top:8px;
+				color:white;
+				margin-right:20px;
+			}
+		
+	</style>
+	<body>
+		<nav class="nav">
+			<div>
+				<a href="homepage.html"><img class="navImg" src="https://i.pinimg.com/originals/ef/57/fc/ef57fca857b89de33b81e9f552c93db7.png" alt=""/></a>
+			</div>
+			<div class="aTags">
+				<a href="addBook.html"><b>Add book</b></a>
+				<a href="veiwPage.html"><b>Veiw All Books</b></a>
+			</div>
+		</nav></br>
+		<div class="divT">
+			<h1>Name</h1>
+			<input class="name" type="text" placeholder="name"/><br>
+			<h1>Author Name</h1>
+			<input class="authorname" type="text" placeholder="Author name"/><br>
+			<h1>Publisher</h1>
+			<input class="publisher"type="text" placeholder="publisher"/><br>
+			<h1>Price</h1>
+			<input class="price"type="text" placeholder="price"/><br>
+			<h1>Type</h1>
+			<input class="type" type="text" placeholder="type"/><br>
+			<h1>Rate</h1>
+			<input class="rate" type="number" placeholder="rate"/><br>
+			<h1>Serial Number</h1>
+			<input class="serialNum"type="text" placeholder="serial number"/><br>
+			<h1>Year</h1>
+			<input class="year" type="number" placeholder="year"/><br>
+			<button class="button"><b>Add Book</b></button>
+		</div>
+	</body>
+	<script>
+		let booksData = JSON.parse(localStorage.getItem("bookDetails"))||[];
+		let button = document.querySelector(".button");
+		button.onclick = function(){
+			let name = document.querySelector(".name").value;
+			let author = document.querySelector(".authorname").value;
+			let publisher = document.querySelector(".publisher").value;
+			let price = document.querySelector(".price").value;
+			let type = document.querySelector(".type").value;
+			let rate = document.querySelector(".rate").value;
+			let serial_number = document.querySelector(".serialNum").value;
+			let year = document.querySelector(".year").value;
+			
+			if(name ==="" ||author=="" ||publisher===""||price===""||type===""||rate===""||serial_number===""||year===""){
+				alert("Please enter all the book details"); 
+			}
+			else{
+	
+				localStorage.setItem("bookDetails",JSON.stringify([...booksData,{name,author,publisher,price,type,rate,serial_number,year}]));
+				alert("book is added");
+			
+			}
+		
+		}
+	</script>
+</html>

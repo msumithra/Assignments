@@ -1,0 +1,74 @@
+<html>
+	<head>
+		<title>save form Details</title>
+		<style>
+			input{
+				margin:auto;
+				padding:5px 94px 5px 0px;
+				margin-top:10px;
+				text-align:left;
+			}
+			.button{
+				
+				padding:6px 118px;
+				margin-top:10px;
+				background-color: rgb(169,48,50);
+				color:white;
+				border:1px solid rgb(169,48,50);
+			}
+			h1{
+				color:rgb(169,48,50);
+				font-size:24px;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div id="form">
+			<h1>Enter the Details</h1>
+			<input class="name" type="text" name="name" placeholder="Enter name"/></br>
+			<input class="num" type="number" placeholder="Mobile number"/></br>
+			<button class="button" onClick="create()">Create</button></br>
+			<div id="appenddiv"></div>
+			
+		
+		</div>
+		
+		<script type="text/javascript">
+			
+			let button = document.querySelector(".button");
+			function create(){
+			let name = document.querySelector(".name").value;
+			let mobile = document.querySelector(".num").value;
+			let displayDiv = document.getElementById("appenddiv");
+			let divTag =document.createElement("div");
+			divTag.style.backgroundColor="rgb(245,245,245)";
+			divTag.style.padding="30px 26px 30px 26px";
+			divTag.style.marginLeft="0px";
+			divTag.style.marginRight="30px";
+			divTag.style.marginTop="30px";
+			
+			let nameTag = document.createElement("div");
+			
+			let mobTag = document.createElement("div");
+			mobTag.style.marginTop="20px";
+			nameTag.innerText="Name :" + name;
+			
+			mobTag.innerText = "Phone Number:"+ mobile;
+			
+			divTag.append(nameTag,mobTag);
+			
+			displayDiv.append(divTag);
+			displayDiv.style.display="flex";
+			displayDiv.style.flexWrap="wrap";
+			displayDiv.style.fontSize="19px";
+			
+			
+		
+			}
+			
+		</script>
+		
+		 
+	</body>
+</html>
